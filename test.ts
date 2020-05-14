@@ -8,10 +8,10 @@ const { os } = Deno.build;
 let chromeName: string;
 let firefoxName: string;
 
-if (os === 'mac') {
+if (os === 'darwin') {
 	chromeName = 'google chrome canary';
 	firefoxName = 'firefox';
-} else if (os === 'win') {
+} else if (os === 'windows') {
 	chromeName = 'Chrome';
 	firefoxName = 'C:\\Program Files\\Mozilla Firefox\\firefox.exe';
 } else if (os === 'linux') {
@@ -66,6 +66,4 @@ Deno.test({
     assert(process.pid !== 0);
   }
 });
-
-Deno.runTests()
 
